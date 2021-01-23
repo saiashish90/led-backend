@@ -1,26 +1,31 @@
 {
-  "name": "led-backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "netlify-express",
+  "version": "0.0.1",
+  "description": "Example of how to deploy a Express.js Netlify app.",
+  "main": "functions/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"netlify-lambda build express"
+    "build": "netlify-lambda build express",
+    "start": "node server-local.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saiashish90/led-backend.git"
+    "url": "git+https://github.com/neverendingqs/netlify-express.git"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "netlify",
+    "express.js"
+  ],
+  "author": "neverendingqs",
+  "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/saiashish90/led-backend/issues"
+    "url": "https://github.com/neverendingqs/netlify-express/issues"
   },
-  "homepage": "https://github.com/saiashish90/led-backend#readme",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "netlify-lambda": "^1.6.3",
-    "serverless-http": "^2.7.0"
+  "homepage": "https://github.com/neverendingqs/netlify-express#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "netlify-lambda": "^0.4.0",
+    "serverless-http": "^1.6.0"
   }
 }
