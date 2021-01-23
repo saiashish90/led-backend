@@ -1,10 +1,12 @@
-exports.handler = async function (event, context) {
-  return {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: "Hello World",
-      event: event,
-      context: context,
-    }),
-  };
-};
+const express = require("express");
+const serverless = require("serverless-http");
+const app = express();
+const bodyParser = require("body-parser");
+
+app.use(bodyParser);
+app.get("/api", (req, res) => {
+  const newValue = "helo";
+  res.json(newValue);
+});
+
+module.exports.handler = serverless(app);
